@@ -83,23 +83,46 @@ h1 {
     color: #00ff88;
 }
 
-/* Button Animation */
+/* 🔥 NEW 3D BUTTON */
 .btn {
-    margin-top: 20px;
+    margin-top: 25px;
     display: inline-block;
-    padding: 15px 25px;
-    background: #00ff88;
+    padding: 18px 35px;
+    background: linear-gradient(145deg, #00ff88, #00cc6a);
     color: black;
-    border-radius: 12px;
+    border-radius: 15px;
     font-weight: bold;
     text-decoration: none;
+    font-size: 18px;
+    letter-spacing: 1px;
+
+    /* 3D effect */
+    box-shadow: 
+        0 6px 0 #00994d,
+        0 10px 20px rgba(0,255,136,0.5);
+
+    transition: all 0.2s ease;
     animation: pulse 1.5s infinite;
 }
 
+/* Telegram icon spacing */
+.tg {
+    margin: 0 8px;
+}
+
+/* Click press effect */
+.btn:active {
+    transform: translateY(4px);
+    box-shadow: 
+        0 2px 0 #00994d,
+        0 5px 10px rgba(0,255,136,0.5);
+}
+
+/* Pulse Animation */
 @keyframes pulse {
-    0% { box-shadow: 0 0 5px #00ff88; }
-    50% { box-shadow: 0 0 25px #00ff88; }
-    100% { box-shadow: 0 0 5px #00ff88; }
+    0% { box-shadow: 0 6px 0 #00994d, 0 0 10px #00ff88; }
+    50% { box-shadow: 0 6px 0 #00994d, 0 0 25px #00ff88; }
+    100% { box-shadow: 0 6px 0 #00994d, 0 0 10px #00ff88; }
 }
 
 /* Footer */
@@ -141,11 +164,13 @@ Join my exclusive Telegram group for premium tips, live updates & more!
     <div><span id="seconds">00</span><br>SECONDS</div>
 </div>
 
-
 <p class="green">👇 Click here to join 👇</p>
 
+<!-- 🔥 UPDATED BUTTON -->
 <a href="https://t.me/VIP_SURESHOT_1" class="btn">
-JOIN FREE TELEGRAM
+    <span class="tg">✈️</span>
+    JOIN FREE TELEGRAM
+    <span class="tg">✈️</span>
 </a>
 
 </div>
@@ -181,7 +206,7 @@ let timer = setInterval(() => {
     time--;
 }, 1000);
 
-// Fake Live Users
+// Live Users
 setInterval(() => {
     let users = document.getElementById("users");
     let random = Math.floor(Math.random() * 20) - 10;
