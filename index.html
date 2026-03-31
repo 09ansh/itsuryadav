@@ -62,18 +62,53 @@ h1 {
 }
 
 /* Timer */
-.timer {
-    margin: 20px;
-    padding: 15px;
-    border-radius: 15px;
+.timer-box {
+    margin: 25px auto;
+    padding: 20px 15px;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 20px;
+    
+    /* Dark glass look */
+    background: rgba(0, 0, 0, 0.6);
+    
+    /* Neon border */
     border: 1px solid #00ff88;
-    box-shadow: 0 0 10px #00ff88;
+
+    /* Glow effect */
+    box-shadow: 
+        0 0 10px #00ff88,
+        inset 0 0 10px rgba(0,255,136,0.2);
+
     display: flex;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.timer div {
-    font-size: 20px;
+/* Time numbers */
+.time {
+    text-align: center;
+}
+
+.time span {
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    display: block;
+}
+
+/* Labels */
+.time label {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #00ff88;
+}
+
+/* Colon dots */
+.dots {
+    font-size: 28px;
+    color: #00ff88;
+    font-weight: bold;
 }
 
 /* Live Users */
@@ -106,7 +141,9 @@ h1 {
 }
 
 /* Telegram icon spacing */
-.tg {
+.tg-icon {
+    width: 20px;
+    height: 20px;
     margin: 0 8px;
 }
 
@@ -157,20 +194,49 @@ h1 {
 Join my exclusive Telegram group for premium tips, live updates & more!
 </p>
 
-<div class="timer">
-    <div><span id="days">00</span><br>DAYS</div>
-    <div><span id="hours">00</span><br>HOURS</div>
-    <div><span id="minutes">05</span><br>MINUTES</div>
-    <div><span id="seconds">00</span><br>SECONDS</div>
+<div class="timer-box">
+    <div class="time">
+        <span id="days">00</span>
+        <label>DAYS</label>
+    </div>
+
+    <div class="dots">:</div>
+
+    <div class="time">
+        <span id="hours">00</span>
+        <label>HOURS</label>
+    </div>
+
+    <div class="dots">:</div>
+
+    <div class="time">
+        <span id="minutes">05</span>
+        <label>MINUTES</label>
+    </div>
+
+    <div class="dots">:</div>
+
+    <div class="time">
+        <span id="seconds">00</span>
+        <label>SECONDS</label>
+    </div>
 </div>
 
 <p class="green">👇 Click here to join 👇</p>
 
 <!-- 🔥 UPDATED BUTTON -->
 <a href="https://t.me/VIP_SURESHOT_1" class="btn">
-    <span class="tg">✈️</span>
+    
+    <svg class="tg-icon" viewBox="0 0 24 24">
+        <path fill="black" d="M9.04 15.54l-.38 5.32c.54 0 .77-.23 1.05-.5l2.52-2.41 5.22 3.82c.96.53 1.64.25 1.9-.89l3.45-16.16h.01c.31-1.45-.52-2.02-1.45-1.67L1.77 9.6c-1.39.54-1.37 1.32-.24 1.67l5.4 1.69L19.46 5.8c.59-.39 1.13-.17.69.22"/>
+    </svg>
+
     JOIN FREE TELEGRAM
-    <span class="tg">✈️</span>
+
+    <svg class="tg-icon" viewBox="0 0 24 24">
+        <path fill="black" d="M9.04 15.54l-.38 5.32c.54 0 .77-.23 1.05-.5l2.52-2.41 5.22 3.82c.96.53 1.64.25 1.9-.89l3.45-16.16h.01c.31-1.45-.52-2.02-1.45-1.67L1.77 9.6c-1.39.54-1.37 1.32-.24 1.67l5.4 1.69L19.46 5.8c.59-.39 1.13-.17.69.22"/>
+    </svg>
+
 </a>
 
 </div>
