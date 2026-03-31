@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SURYA SURESHOT</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: white;
+    background: url('bg.jpg') no-repeat center/cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.75);
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.main {
+    flex: 1;
+}
+
+/* Logo */
+.logo img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #00ff88;
+    outline: 2px solid red;
+    box-shadow: 0 0 20px #00ff88;
+    object-fit: cover;
+    margin-top: 40px;
+}
+
+/* Title */
+h1 {
+    font-size: 28px;
+    letter-spacing: 3px;
+    margin-top: 15px;
+}
+
+.green {
+    color: #00ff88;
+    font-weight: bold;
+}
+
+.desc {
+    color: #ccc;
+    padding: 0 20px;
+}
+
+/* Timer */
+.timer {
+    margin: 20px;
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid #00ff88;
+    box-shadow: 0 0 10px #00ff88;
+    display: flex;
+    justify-content: space-around;
+}
+
+.timer div {
+    font-size: 20px;
+}
+
+/* Live Users */
+.live {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #00ff88;
+}
+
+/* Button Animation */
+.btn {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 15px 25px;
+    background: #00ff88;
+    color: black;
+    border-radius: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 5px #00ff88; }
+    50% { box-shadow: 0 0 25px #00ff88; }
+    100% { box-shadow: 0 0 5px #00ff88; }
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 15px;
+    color: #aaa;
+    font-size: 14px;
+}
+.footer a {
+    color: #00ff88;
+    text-decoration: none;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="main">
+
+<div class="logo">
+    <img src="logo.png">
+</div>
+
+<h1>SURYA SURESHOT 🚩</h1>
+
+<p class="green">Recover All Your Losses</p>
+<p class="green">Get 95% Accurate Shots 🔥</p>
+
+<p class="desc">
+Join my exclusive Telegram group for premium tips, live updates & more!
+</p>
+
+<div class="timer">
+    <div><span id="days">00</span><br>DAYS</div>
+    <div><span id="hours">00</span><br>HOURS</div>
+    <div><span id="minutes">05</span><br>MINUTES</div>
+    <div><span id="seconds">00</span><br>SECONDS</div>
+</div>
+
+<div class="live">
+👀 <span id="users">120</span> people are watching now
+</div>
+
+<p class="green">👇 Click here to join 👇</p>
+
+<a href="https://t.me/VIP_SURESHOT_1" class="btn">
+JOIN FREE TELEGRAM
+</a>
+
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    ADS MANAGED BY TG 
+    <a href="https://t.me/anshrich">@B0SS_ANSH</a>
+    <br><br>
+    COPYRIGHT © | TG @DESI_CHORAA
+</div>
+
+<script>
+// Timer
+let time = 300;
+
+let timer = setInterval(() => {
+    let days = Math.floor(time / 86400);
+    let hours = Math.floor((time % 86400) / 3600);
+    let minutes = Math.floor((time % 3600) / 60);
+    let seconds = time % 60;
+
+    document.getElementById("days").innerText = String(days).padStart(2, '0');
+    document.getElementById("hours").innerText = String(hours).padStart(2, '0');
+    document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
+    document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
+
+    if (time <= 0) {
+        clearInterval(timer);
+        window.location.href = "https://t.me/VIP_SURESHOT_1";
+    }
+
+    time--;
+}, 1000);
+
+// Fake Live Users
+setInterval(() => {
+    let users = document.getElementById("users");
+    let random = Math.floor(Math.random() * 20) - 10;
+    let current = parseInt(users.innerText);
+    users.innerText = current + random;
+}, 3000);
+</script>
+
+</body>
+</html>
